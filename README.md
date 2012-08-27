@@ -1,1 +1,4 @@
-This is a fork of http://code.google.com/p/stagewebviewbridge/
+StageWebViewBridge
+=============
+
+This is a fork of [StageWebViewBridge](http://code.google.com/p/stagewebviewbridge/)
