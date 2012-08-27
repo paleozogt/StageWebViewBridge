@@ -57,6 +57,20 @@
 		/* Used to determine the "protocol" to do the comm with AS3 */
 		var sendingProtocol = checker.iphone ? 'about:':'tuoba:';		
 
+        /* JSON library */
+        var JSON= window.JSON;
+
+        /* override JSON lib */
+		var setJSON = function( val )
+		{
+		    JSON= val;
+		};
+
+		var getJSON = function( )
+		{
+		    return JSON;
+		};
+
 	/* METHODS */	
 		
 		/* Used internally to parse call funcions from AS3 */
@@ -252,7 +266,9 @@
 			ready:ready,
 			deviceReady:deviceReady,
 			domLoaded:domLoaded,
-			setCallDelay:setCallDelay
+			setCallDelay:setCallDelay,
+			setJSON:setJSON,
+			getJSON:getJSON
 		};
 	})();
 })(window);
