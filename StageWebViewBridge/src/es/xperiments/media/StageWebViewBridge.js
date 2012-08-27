@@ -57,18 +57,18 @@
 		/* Used to determine the "protocol" to do the comm with AS3 */
 		var sendingProtocol = checker.iphone ? 'about:':'tuoba:';		
 
-        /* JSON library */
-        var JSON= window.JSON;
+		/* JSON library */
+		var JSON= window.JSON;
 
-        /* override JSON lib */
+		/* override JSON lib */
 		var setJSON = function( val )
 		{
-		    JSON= val;
+			JSON= val;
 		};
 
 		var getJSON = function( )
 		{
-		    return JSON;
+			return JSON;
 		};
 
 	/* METHODS */	
