@@ -135,6 +135,13 @@
 				};
 			};
 
+			/* workaround prototype.js evil
+			   @see: http://stackoverflow.com/questions/710586/json-stringify-bizarreness
+			*/
+			if (argumentsArray.toJSON) {
+				argumentsArray.toJSON= undefined;
+			}
+
 			_serializeObject.arguments = argumentsArray;
 			if( _serializeObject.callBack !=undefined ) { addCallback('[SWVMethod]'+arguments[ 0 ], arguments[ 1 ] ); };
 			setTimeout( function(){ window.location.href=sendingProtocol+'[SWVData]'+btoa( JSON.stringify( _serializeObject ) );},aggregatedCallDelay );			
