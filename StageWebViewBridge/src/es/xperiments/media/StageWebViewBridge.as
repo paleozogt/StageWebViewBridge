@@ -285,6 +285,7 @@ package es.xperiments.media
 				case LocationChangeEvent.LOCATION_CHANGE:
 				case FocusEvent.FOCUS_IN:
 				case FocusEvent.FOCUS_OUT:
+				case ErrorEvent.ERROR:
 					_view.addEventListener( type, listener, useCapture, priority, useWeakReference );
 					break;
 				default:
@@ -306,6 +307,7 @@ package es.xperiments.media
 				case LocationChangeEvent.LOCATION_CHANGE:
 				case FocusEvent.FOCUS_IN:
 				case FocusEvent.FOCUS_OUT:
+				case ErrorEvent.ERROR:
 					_view.removeEventListener( type, listener, useCapture );
 					break;
 				default:
