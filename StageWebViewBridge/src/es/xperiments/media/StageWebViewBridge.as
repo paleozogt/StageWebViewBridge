@@ -20,6 +20,7 @@ package es.xperiments.media
 	import flash.display.DisplayObject;
 	import flash.display.DisplayObjectContainer;
 	import flash.display.Stage;
+	import flash.events.ErrorEvent;
 	import flash.events.Event;
 	import flash.events.FocusEvent;
 	import flash.events.LocationChangeEvent;
