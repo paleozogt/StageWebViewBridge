@@ -487,6 +487,16 @@ package es.xperiments.media
 		{
 			return _stage;
 		}
+        /**
+         * (Added by Peter Lee) for the users who want to directly assign the a stage to the
+         * StageWebView inside StageWebViewBridge.as instead of using StageWebViewDisk.initialize(stage)
+         * which breaks the File Upload in iPad device (or any other iOS devies?)
+         * (http://stackoverflow.com/questions/15306461/stagewebviewdisk-breaks-the-file-upload)
+         */
+        static public function set stage(value:Stage) : void
+        {
+            _stage = value;
+        }
 
 		/**
 		 * Parses the provided source searching files that contains the
