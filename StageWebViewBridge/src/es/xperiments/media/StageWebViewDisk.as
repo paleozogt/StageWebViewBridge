@@ -488,6 +488,15 @@ package es.xperiments.media
 			return _stage;
 		}
 
+        /**
+         * Sets reference to global stage.
+         * Note that you should really use initialize to set the Stage.
+         */
+		static public function set stage(val:Stage):void
+		{
+		    _stage= val;
+		}
+
 		/**
 		 * Parses the provided source searching files that contains the
 		 * appfile:/ protocol then changes the path according to the extension of the file.
