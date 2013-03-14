@@ -122,7 +122,8 @@ package es.xperiments.media
 					 * https://developer.apple.com/icloud/documentation/data-storage/
 					 * https://developer.apple.com/library/ios/#qa/qa1719/_index.html
 					 */					
-					_applicationTempDir = new File(File.applicationDirectory.nativePath +"/\.\./tmp");
+					_applicationTempDir = new File(File.applicationDirectory.nativePath +"/\.\./SWVBTmp");
+                    // It seems "tmp" is being used by the iOS system (such as the html file upload), so we changed to "SWVBTmp"; 
 					
 					// To acomplish the Apple  Data Storage Guidelines Rules delete our TMP files dir at exit
 					NativeApplication.nativeApplication.addEventListener(Event.EXITING, deleteTempFolder,false,0,true );
